@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import 'minireset.css';
 import './App.css';
 
-function App({ distortion, showIcon }) {
+function App({ distortion, showIcon, backgroundColor, stepColors }) {
   const circles = new Array(20).fill(" ")
 
   function getRandomNumber(max, min) {
@@ -18,7 +18,7 @@ function App({ distortion, showIcon }) {
   }, []);
 
   return (
-    <div className="App">
+    <div className="App" style={{ backgroundColor: backgroundColor }}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         id="bgart"
@@ -48,8 +48,8 @@ function App({ distortion, showIcon }) {
           </filter>
 
           <linearGradient id="bggrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" />
-            <stop offset="100%" />
+            <stop offset="0%" stopColor={stepColors[0]} />
+            <stop offset="100%" stopColor={stepColors[1]} />
           </linearGradient>
         </defs>
       </svg>
@@ -67,4 +67,6 @@ export default App;
 App.defaultProps = {
   distortion: 100,
   showIcon: true,
+  backgroundColor: '#205efe',
+  stepColors: ['#e40046', '#ff8674']
 }
