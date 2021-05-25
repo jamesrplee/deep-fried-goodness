@@ -2,7 +2,13 @@ import { useEffect } from 'react';
 import 'minireset.css';
 import './App.css';
 
-function App({ distortion, showIcon, backgroundColor, stepColors }) {
+function App({
+    distortion,
+    showIcon,
+    backgroundColor,
+    stepColors,
+    headline
+}) {
   const circles = new Array(20).fill(" ")
 
   function getRandomNumber(max, min) {
@@ -19,6 +25,7 @@ function App({ distortion, showIcon, backgroundColor, stepColors }) {
 
   return (
     <div className="App" style={{ backgroundColor: backgroundColor }}>
+      {headline && <h1>{headline}</h1>}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         id="bgart"
@@ -53,7 +60,7 @@ function App({ distortion, showIcon, backgroundColor, stepColors }) {
           </linearGradient>
         </defs>
       </svg>
-      {showIcon && (
+      {!headline && showIcon && (
         <svg viewBox="-3 0 8 11" class="make-logo" stroke="white" strokeWidth="1" fill="none">
           <path strokeWidth="1.5" d="m -2 8.2 a 1 1 0 0 1 4 0 m -2 -3.25 a 1 -1 0 0 1 4 0 v 3.25" />
         </svg>

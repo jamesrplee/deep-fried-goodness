@@ -1,2 +1,0 @@
-:root{--bgtime:3s;--bg:#fff}.App,body{height:100vh;overflow:hidden}.make-logo{position:absolute;z-index:99999;color:#fff;color:var(--bg);mix-blend-mode:exclusion;pointer-events:none;opacity:1}#bgart,.make-logo{top:0;left:0;right:0;bottom:0;width:100vw;height:100vh}#bgart{position:fixed;margin:0}#bgart circle{fill:transparent;stroke:url(#bggrad);stroke-linecap:butt;animation:bgmove 3s linear infinite;animation:bgmove var(--bgtime) linear infinite}@keyframes bgmove{0%{stroke-dashoffset:1000}to{stroke-dashoffset:0}}
-/*# sourceMappingURL=main.7d6b089c.chunk.css.map */

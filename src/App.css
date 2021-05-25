@@ -3,9 +3,24 @@
   --bg: hsl(0, 0%, 100%);
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
+
 body, .App {
   height: 100vh;
   overflow: hidden;
+}
+
+h1 {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: white;
+  font-weight: bold;
+  font-size: clamp(2rem, 5.8750rem + 2.0000vw, 10rem) !important;
+  line-height: 1;
+  z-index: 100;
+  font-family: 'Dela Gothic One', cursive;
 }
 
 .make-logo {
